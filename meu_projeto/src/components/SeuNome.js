@@ -1,12 +1,5 @@
 function SeuNome({setNome}){
     
-    function enviar(e){
-        return(
-            <p>dasda</p>
-        )
-        
-    }
-    
     return(
         <div>
             <h1>Digite seu nome:</h1>
