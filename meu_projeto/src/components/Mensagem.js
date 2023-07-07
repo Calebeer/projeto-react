@@ -18,18 +18,14 @@ function Mensagem(){
     return(
         <div>
             
-            <Boti  event={actionOnClick} text="Aperte" />
+            <Boti  event={actionOnClick} text="Aperte" mostrar={mostrar} />
 {/* 
             {nome}
             <p>
             {contador}
             </p> */}
 
-            {mostrar && (
-                <div>
-                    OPA
-                </div>
-            )}
+            
 
         </div>
     )

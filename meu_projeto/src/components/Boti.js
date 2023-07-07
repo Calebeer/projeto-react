@@ -7,6 +7,11 @@ function Boti(props){
             <button type="submit"  onClick={props.event} >{props.text}</button>
 
             ..
+            {props?.mostrar && (
+                <div>
+                    OPA
+                </div>
+            )}
         </div>
     )
 }

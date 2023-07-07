@@ -1,56 +1,55 @@
-import React from 'react';
-import './App.css';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 
-// import { Routes } from 'react-router-dom';
-import Home from "./pages/Home"
-import Empresa from "./pages/Empresa"
-import Contato from "./pages/Contato"
-import Boti from './components/Boti';
-import Mensagem from './components/Mensagem';
 
-function App() { 
+// function App() { 
 
+//   return (
+//     <Router>
+//       <ul>
+//         <li>
+//           <Link to="/" >Home</Link>
+//         </li>
+//         <li>
+//           <Link to="/empresa" >Empresa</Link>
+//         </li>
+//         <li>
+//           <Link to="/contato" >Contato</Link>
+//         </li>
+//       </ul>
+//       <Switch>
+//         <Route path='/' >
+//           <Home/>
+//         </Route>
+//         <Route path='/empresa' >
+//           <Empresa/>
+//         </Route>
+//         <Route path='/contato' >
+//           <Contato/>
+//         </Route>
+//       </Switch>
+//     </Router>
+//   );
+// }
+
+// export default App;
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
+
+const App = () => {
   return (
-    // <Router>
-    // <div>
-
-    //   {/* Cabeçalho */}
-    //   <nav>
-    //     <div style={{ display:'flex'}}>
-    //       <div>
-    //         <Link to="/">Home</Link>
-    //       </div>
-    //       <div>
-    //         <Link to="/empresa">empresa</Link>
-    //       </div>
-    //       <div>
-    //         <Link to="/contato">contato</Link>
-    //       </div>
-    //     </div>
-    //   </nav>
-
-    //   {/* Corpo */}
-    //   <div style={{backgroundColor:'red'}}>
-    //     <Routes>
-    //       <Route path="/" element={<Home />} />
-    //       <Route path="/empresa" element={<Empresa />} />
-    //       <Route path="/contato" element={<Contato />} />
-    //     </Routes>
-    //   </div>
-
-    //   {/* Footer */}
-    //   <div style={{backgroundColor:'pink'}}>
-    //     Footer
-    //   </div>
-      
-
-    //   </div>
-    // </Router>
-
-    <Mensagem/>
+    <Router>
+       <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/empresa" element={<Empresa />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
